@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menu.addEventListener("mouseout", function() {
         list.style.display = "none";
-    })
+    });
 
     var buttons = document.querySelectorAll('.read-more');
 
@@ -26,11 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
             textArea.style.display = 'none';
             this.innerHTML = 'WIĘCEJ <span class="glyphicon glyphicon-chevron-up"></span>';
         }
-    }
+    };
 
     for (var i = 0; i < buttons.length; i++){
         buttons[i].addEventListener("click", showHide);
-    }
-    //buttons[0].addEventListener("click", showHide);
+    };
+
+    var pasek = document.querySelector('.collapse');
+    window.addEventListener('scroll', function() {
+        pasek.style.borderBottom = '1px solid #7f7f7f';
+    });
+    console.log(pasek);
 
 });
