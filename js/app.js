@@ -32,10 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
         buttons[i].addEventListener("click", showHide);
     };
 
-    var pasek = document.querySelector('.collapse');
+    var navi = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
-        pasek.style.borderBottom = '1px solid #7f7f7f';
+        navi.style.borderBottom = '1px solid #7f7f7f';
     });
-    console.log(pasek);
 
+    var goUp = document.querySelector('.up');
+    goUp.addEventListener('click', function(){
+        window.scroll(0,0);
+    })
 });
